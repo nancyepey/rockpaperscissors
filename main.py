@@ -16,11 +16,11 @@ play = True
 # user_choice = input("Please choice an option: ")
 # print("Player ("+user_choice+") : CPU ("+cpu_choice+")")
 
-def startgame():
-    print("Rock-Paper-Scissors GAME")
-    print("Available options: R for Rock, P for Paper, or S for Scissors")
-    user_choice = input("Please choice an option: ")
-    print("Player ("+user_choice+") : CPU ("+cpu_choice+")")
+# def startgame():
+#     print("Rock-Paper-Scissors GAME")
+#     print("Available options: R for Rock, P for Paper, or S for Scissors")
+#     user_choice = input("Please choice an option: ")
+#     print("Player ("+user_choice+") : CPU ("+cpu_choice+")")
 
 def endgame():
     # print("Rock-Paper-Scissors GAME")
@@ -31,7 +31,7 @@ def restart():
     # print("Rock-Paper-Scissors GAME")
     print("Restart GAME")
     user_choice = input("Please choice an option: ")
-    cpu_choice = "R"
+    cpu_choice = random.choice(options)
     print("Player ("+user_choice+") : CPU ("+cpu_choice+")")
     game(user_choice, cpu_choice)
 
@@ -65,7 +65,7 @@ def game(user_choice, cpu_choice):
 while play:
     # startgame()
     cpu_choice = random.choice(options)
-    cpu_choice = "R"
+    # cpu_choice = "R"
     print("Available options: R for Rock, P for Paper, or S for Scissors")
     # user_choice = input("Please choice an option: ")
     user_choice = input("Please choice an option: ")
@@ -77,22 +77,7 @@ while play:
         if user_choice != cpu_choice:
             print("Results")
             game(user_choice, cpu_choice)
-            # if(((user_choice == "R") & (cpu_choice == "S"))):
-            #     print("You won 😄")
-            #     endgame()
-            #     play = False
-            # elif(((user_choice == "P") & (cpu_choice == "R"))):
-            #     print("You won 😄")
-            #     endgame()
-            #     play = False
-            # elif(((user_choice == "S") & (cpu_choice == "P"))):
-            #     print("You won 😄")
-            #     endgame()
-            #     play = False
-            # else:
-            #     print("Oops you lost 😩 (CPU WON)")
-            #     endgame()
-            #     play = False
+            play = False
         else:
             print("Oops we got a tie!")
             play = False
