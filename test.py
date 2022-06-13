@@ -30,18 +30,11 @@ def endgame():
 def restart():
     # print("Rock-Paper-Scissors GAME")
     print("Restart GAME")
-    user_choice = input("Please choice an option: ")
-    cpu_choice = "R"
-    print("Player ("+user_choice+") : CPU ("+cpu_choice+")")
-    game(user_choice, cpu_choice)
 
 
 def game(user_choice, cpu_choice):
     print("Rock-Paper-Scissors GAME")
-    if user_choice == cpu_choice:
-        print("Oops we got a tie")
-        restart()
-    elif(((user_choice == "R") & (cpu_choice == "S"))):
+    if(((user_choice == "R") & (cpu_choice == "S"))):
         print("You won 😄")
         endgame()
         play = False
