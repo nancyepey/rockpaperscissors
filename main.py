@@ -64,7 +64,7 @@ def game(user_choice, cpu_choice):
 
 while play:
     # startgame()
-    print("Rock-Paper-Scissors GAME")
+    # print("Rock-Paper-Scissors GAME")
     cpu_choice = random.choice(options)
     # cpu_choice = "R"
     print("Available options: R for Rock, P for Paper, or S for Scissors")
